@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let temp = []
+        while (temp.length < 6) {
+            let num = random(1, 38)
+            if (!temp.includes(num)) {
+                temp.push(num)
+            }
+        }
+        document.write(`A區的數字：${temp}<br>B區的數字：${random(1, 8)}`)
+
+        function random(min, max) {
+            return Math.round(Math.random() * (max - min)) + min
+        }
+    </script>
+</body>
+
+</html>
